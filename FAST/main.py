@@ -1,18 +1,13 @@
 from fastapi import FastAPI, HTTPException
 from typing import Optional, List
 from pydantic import BaseModel
+from models import modelUsuario
 
 app = FastAPI(
     title="Mi primer API con FastAPI",
     description="Esto es una descripción de mi API",
     version="1.0.1"
 )
-
-class modelUsuario(BaseModel):
-    id:int
-    nombre:str
-    edad:int
-    correo:str
     
 
 usuarios=[
